@@ -1,0 +1,29 @@
+// For format details, see https://aka.ms/vscode-remote/devcontainer.json or this file's README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.112.0/containers/cpp
+{
+  "name": "Development container for scft.",
+  "dockerFile": "Dockerfile",
+  // This line is necessary as requirements.txt is outside the .devcontainer directory
+  "context": "..",
+  // Set *default* container specific settings.json values on container create.
+  "settings": {
+    "terminal.integrated.shell.linux": "/usr/bin/fish"
+  },
+  // Add the IDs of extensions you want installed when the container is created.
+  "extensions": [
+    "ms-python.python",
+    "ms-azuretools.vscode-docker",
+    "yzhang.markdown-all-in-one",
+    "davidanson.vscode-markdownlint",
+    "fudd.toggle-zen-mode"
+  ],
+  // Jupter server default port: https://jupyter-notebook.readthedocs.io/en/stable/public_server.html.
+  "forwardPorts": [
+    8888
+  ],
+  "postCreateCommand": [
+    "whoami"
+  ],
+  // non-root user that will be used inside the container
+  "remoteUser": "vscode"
+}
