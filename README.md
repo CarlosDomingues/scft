@@ -10,7 +10,9 @@ This project uses Docker and Visual Studio Code so it can be easily reproduced. 
 
 2 - Install Visual Studio Code.
 
-3 - Watch the GIF: (To be done)
+3 - Watch the GIF:
+
+![Opening a VS Code project inside a container.](docs/startup-guide.gif)
 
 ## Browsing
 
@@ -18,13 +20,12 @@ After building the dev environment, it should be possible to browse notebooks in
 
 1. Opening them directly on Visual Studio Code.
 
-2. [On your favorite browser](http://localhost:8888).
+2. [On your favorite browser](http://localhost:8888), after firing up the JupyterLab server:
+
+```shell
+jupyter lab --core-mode --ip 0.0.0.0 --port 8888  --no-browser
+```
 
 ## Bibliography
 
-This sessions is a non-standard bibliography with citations used around the repo.
-
-
-## TODO
-
-- Show how use numpy with sympy in 0.0
+* [Statistical Consequences of Fat Tails: Real World Preasymptotics, Epistemology, and Applications](https://arxiv.org/pdf/2001.10488)

@@ -43,5 +43,3 @@ WORKDIR ${BUILD_USER_HOME}
 SHELL ["/usr/bin/fish", "-c"]
 RUN set -Ua fish_user_paths $BUILD_USER_HOME/.local/bin && \
     pip install -r $BUILD_USER_HOME/requirements.txt
-
-# jupyter lab --core-mode --ip 0.0.0.0 --port 8888  --no-browser
