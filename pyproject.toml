@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "scft"
+version = "0.1.0"
+description = "A repository for studies related to Statistical Consequences of Fat Tails, by Nassim Nicholas Taleb."
+authors = ["Carlos Domingues <carlosfelipe.domingues@gmail.com>"]
+readme = "README.md"
+repository = "https://github.com/CarlosDomingues/scft"
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "~3.8"
+numpy = "^1.20.3"
+jupyterlab = "^3.0.15"
+pandas = "^1.2.4"
+plotly = "^4.14.3"
+scipy = "^1.6.3"
+sympy = "^1.8"
+
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

@@ -1,10 +1,20 @@
 FROM python:3.8-buster
 
-# Install Python 3 and common tools. You can check latest packages using apt policy <package>
+# Update and upgrade base system
 RUN apt-get update --yes && apt-get upgrade --yes
+
+# Automatically setup Time Zone
+RUN pip install tzupdate
+
+# Install and configure poetry
+RUN pip install poetry
+ENV PATH="/root/.local/bin:${PATH}"
+RUN poetry config virtualenvs.create false && \
+    poetry completions bash > /etc/bash_completion.d/poetry.bash-completion
 
 # Install dependencies
 WORKDIR /tmp
-COPY requirements.txt /tmp/requirements.txt
-RUN pip install -r /tmp/requirements.txt && \
+COPY pyproject.toml /tmp/pyproject.toml
+COPY poetry.lock /tmp/poetry.lock
+RUN poetry install && \
     rm -rf /tmp/*

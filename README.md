@@ -1,6 +1,6 @@
 # scft
 
-A repository for studies related to *Statistical Consequences of Fat Tails*, by Nassim Nicholas Taleb. It consists mostly of JupyterLab Notebooks.
+A repository for studies related to Statistical Consequences of Fat Tails, by Nassim Nicholas Taleb. It consists mostly of JupyterLab Notebooks.
 
 ## Hacking
 
