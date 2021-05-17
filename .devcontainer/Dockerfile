@@ -4,4 +4,7 @@ FROM python:3.8-buster
 RUN apt-get update --yes && apt-get upgrade --yes
 
 # Install dependencies
-COPY requirements.txt $BUILD_USER_HOME/requirements.txt
+WORKDIR /tmp
+COPY requirements.txt /tmp/requirements.txt
+RUN pip install -r /tmp/requirements.txt && \
+    rm -rf /tmp/*

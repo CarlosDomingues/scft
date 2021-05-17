@@ -4,8 +4,9 @@
   "context": "..",
   "extensions": [
     "ms-python.python",
-    "yzhang.markdown-all-in-one",
+    "ms-toolsai.jupyter",
     "davidanson.vscode-markdownlint",
+    "yzhang.markdown-all-in-one",
     "fudd.toggle-zen-mode"
   ],
   // Jupter server default port: https://jupyter-notebook.readthedocs.io/en/stable/public_server.html.
@@ -24,6 +25,5 @@
     "files.trimTrailingWhitespace": true,
     "jupyter.jupyterServerType": "local",
     "jupyter.alwaysTrustNotebooks": true,
-    "python.pythonPath": "/usr/local/bin/python",
   },
 }
