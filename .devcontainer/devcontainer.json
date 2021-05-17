@@ -11,5 +11,19 @@
   // Jupter server default port: https://jupyter-notebook.readthedocs.io/en/stable/public_server.html.
   "forwardPorts": [
     8888
-  ]
+  ],
+  "settings": {
+    "extensions.ignoreRecommendations": false,
+    "[dockerfile]": {
+      "editor.formatOnSave": false
+    },
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.wordWrapColumn": 180,
+    "editor.formatOnSave": true,
+    "editor.wrappingIndent": "indent",
+    "files.trimTrailingWhitespace": true,
+    "jupyter.jupyterServerType": "local",
+    "jupyter.alwaysTrustNotebooks": true,
+    "python.pythonPath": "/usr/local/bin/python",
+  },
 }
