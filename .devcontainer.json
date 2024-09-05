@@ -1,12 +1,13 @@
 {
-    "name": "Dev Container - scft",
-    "image": "mcr.microsoft.com/vscode/devcontainers/python:3.10-bullseye",
+    "name": "scft",
+    "image": "mcr.microsoft.com/vscode/devcontainers/python:3.12-bookworm",
     "postCreateCommand": "pip install -r requirements.txt",
     "remoteUser": "vscode",
-    "extensions": [
-        "ms-python.python",
-        "ms-python.vscode-pylance",
-        "davidanson.vscode-markdownlint",
-        "yzhang.markdown-all-in-one",
-      ],
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python"
+            ]
+        }
+    }
 }
